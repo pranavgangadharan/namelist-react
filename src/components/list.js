@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 class List extends React.Component
 {
@@ -18,7 +19,9 @@ render() {
             {
                 this.state.names.map((item,index) => (
                     <li key={index}>
+                    <Link to = {`list/${index}`}>
                     {item.name}
+                    </Link>
                     </li>
                 ))
             }
